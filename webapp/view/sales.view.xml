@@ -1,0 +1,68 @@
+<mvc:View controllerName="org.indexit.zsdsalesprocess.controller.sales"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <content>
+<SearchField id="_IDGenSearchField" search="onSearch" change="onChange"/>
+<Table id="_IDGenTabel" headerText="{i18n>tblHeader}" noDataText="{i18n>ndt}" mode="MultiSelect" items="{SalesModel>/}" growing="true" growingThreshold="1">
+<headerToolbar>
+<Toolbar>
+<ToolbarSpacer/>
+<Button id="idAdd" text="{i18n>btnAdd}" type="Emphasized" press="onSubmitClick"/>
+<Button id="idEdit" text="{i18n>btnEdit}" type="Success" enabled="false"/>
+</Toolbar>
+</headerToolbar>
+<columns>
+<Column>
+<Text text="{i18n>VBELN}"/>
+</Column>
+<Column>
+<Text text="{i18n>POSNR}"/>
+</Column>
+<Column>
+<Text text="{i18n>MATNR}"/>
+</Column>
+<Column>
+<Text text="{i18n>NETPR}"/>
+</Column>
+<Column>
+<Text text="{i18n>BUKRS}"/>
+</Column>
+<Column>
+<Text text="{i18n>DISCOUNT}"/>
+</Column>
+<Column>
+<Text text="{i18n>STKAVAIL}"/>
+</Column>
+</columns>
+<items>
+<ColumnListItem>
+<cells>
+<!--  salesInfo[0].VBELN=SalesModel  -->
+<Text text="{SalesModel>VBELN}"/>
+<!--  salesInfo[0].POSNR  -->
+<Text text="{SalesModel>POSNR}"/>
+<Text text="{SalesModel>MATNR}"/>
+<Text text="{SalesModel>NETPR}"/>
+<Text text="{SalesModel>BUKRS}"/>
+<Text text="{SalesModel>DISCOUNT}"/>
+<!--  sap-icon://cart-2 stock available -->
+<!--  sap-icon://cart-3 stock unavailable -->
+<Button text="{SalesModel>STKAVAIL}" icon="sap-icon://cart-3"/>
+<!--  <ObjectStatus text="{SalesModel>DISCOUNT}" state="Success"/>  -->
+<!--  <ObjectStatus text="{SalesModel>DISCOUNT}" state="{= parseFloat(${SalesModel>DISCOUNT}) === 90.90 ? 'Error' : 'Success' }"/>  -->
+</cells>
+</ColumnListItem>
+</items>
+</Table>
+</content>
+<footer>
+<Bar id="_IDGenBar">
+<contentRight>
+<Button id="iSave" text="{i18n>btnTxt}" type="Emphasized" press="onSubmitClick"/>
+<!--  <Button id="iEdit" text="{i18n>btnTxt}" type="Emphasized" press="onSubmitClick"/>  -->
+</contentRight>
+</Bar>
+</footer>
+</Page>
+</mvc:View>
