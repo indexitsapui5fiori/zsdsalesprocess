@@ -33,3 +33,16 @@ An SAP Fiori application.
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 
 
+
+#### Date formates generic :
+ISO 8601 (Numeric Global): 2026-08-24 (YYYY-MM-DD)
+US Standard: 08/24/2026 (MM/DD/YYYY)
+UK / International Standard: 24/08/2026 or 24.08.2026 (DD/MM/YYYY)
+Long Written Form: August 24, 2026 (Month DD, YYYY)
+European Written Form: 24 August 2026 (DD Month YYYY)
+Short Month Style: 24-Aug-2026 (DD-MMM-YYYY)
+Full Day and Date: Monday, August 24, 2026 (Day, Month DD, YYYY)
+Compact Numeric: 20260824 (YYYYMMDD)
+
+
+
