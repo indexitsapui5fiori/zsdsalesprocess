@@ -152,8 +152,8 @@ sap.ui.define([
 
         //onSearch:function(){},
         onSearch(oControlEvent) {
-            //var btnTextE=oControlEvent.getSource().getProperty("text");
-            var btnTextV = this.getView().byId("iSubmit").getProperty("text");
+          ///No nooodddeeeeeee
+          
 
         },
         onChange: function () { },
